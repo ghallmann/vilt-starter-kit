@@ -6,7 +6,9 @@
 /storage/*.key
 /storage/pail
 /vendor
+*.log
 .env
+.env.*
 .env.backup
 .env.production
 .phpactor.json
@@ -20,3 +22,9 @@ yarn-error.log
 /.idea
 /.vscode
 /.zed
+/dist
+*.config.js
+package-lock.json
+*.min.js
+*.min.css
+coverage/
