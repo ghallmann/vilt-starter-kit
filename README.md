@@ -6,6 +6,6 @@
 - [x] Install Jetstream
 - [x] Confif Makefile
 - [ ] Remove unnecessary boilerplate
-- [ ] Config eslint + prettier
+- [x] Config eslint + prettier
 - [ ] Config testing enviroment
 - [ ] Create 'installation guide' 
