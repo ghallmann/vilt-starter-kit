@@ -1,6 +1,6 @@
 # Config checklist
 
-- [ ] Create dockerfile
+- [x] Create dockerfile
 - [ ] Config docker-compose
 - [ ] Install Laravel
 - [ ] Install Jetstream
