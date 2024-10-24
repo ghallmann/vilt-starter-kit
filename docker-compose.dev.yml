@@ -6,7 +6,7 @@ services:
         container_name: app
         build:
             context: .
-            dockerfile: Dockerfile
+            dockerfile: docker/Dockerfile
         restart: unless-stopped
         ports:
             - "5173:5173"
@@ -28,7 +28,7 @@ services:
             - "8080:80"
         volumes:
             - ./:/var/www
-            - ./docker/nginx/laravel.conf:/etc/nginx/conf.d/default.conf
+            - ./docker/nginx/laravel.dev.conf:/etc/nginx/conf.d/default.conf
         networks:
             - laravel
 
