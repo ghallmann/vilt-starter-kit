@@ -7,5 +7,6 @@
 - [x] Confif Makefile
 - [ ] Remove unnecessary boilerplate
 - [x] Config eslint + prettier
+- [ ] Config logs
 - [ ] Config testing enviroment
 - [ ] Create 'installation guide' 
