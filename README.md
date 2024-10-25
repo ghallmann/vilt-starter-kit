@@ -9,5 +9,5 @@
 - [x] Config eslint + prettier
 - [ ] Config prettier-plugin-tailwindcss
 - [ ] Config logs
-- [ ] Config testing enviroment
+- [x] Config testing enviroment
 - [ ] Create 'installation guide' 
