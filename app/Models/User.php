@@ -6,6 +6,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Log;
 use Laravel\Fortify\TwoFactorAuthenticatable;
 use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Jetstream\HasTeams;
@@ -65,5 +67,23 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+
+    protected static function booted()
+    {
+        static::created(function ($user) {
+            $auth = Auth::user();
+            Log::info('User created', ['user' => $auth, 'userCreated' => $user]);
+        });
+
+        static::updated(function ($user) {
+            $auth = Auth::user();
+            Log::info('User updated', ['user' => $auth, 'changes' => $user->changes, 'userUpdated' => $user]);
+        });
+
+        static::deleted(function ($user) {
+            $auth = Auth::user();
+            Log::info('User deleted', ['user' => $auth, 'userDeleted' => $user]);
+        });
     }
 }
