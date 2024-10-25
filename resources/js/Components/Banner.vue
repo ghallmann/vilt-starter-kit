@@ -23,11 +23,11 @@ watchEffect(async () => {
                 'bg-red-700': style == 'danger'
             }"
         >
-            <div class="max-w-screen-xl mx-auto py-2 px-3 sm:px-6 lg:px-8">
-                <div class="flex items-center justify-between flex-wrap">
-                    <div class="w-0 flex-1 flex items-center min-w-0">
+            <div class="mx-auto max-w-screen-xl px-3 py-2 sm:px-6 lg:px-8">
+                <div class="flex flex-wrap items-center justify-between">
+                    <div class="flex w-0 min-w-0 flex-1 items-center">
                         <span
-                            class="flex p-2 rounded-lg"
+                            class="flex rounded-lg p-2"
                             :class="{
                                 'bg-indigo-600': style == 'success',
                                 'bg-red-600': style == 'danger'
@@ -66,7 +66,7 @@ watchEffect(async () => {
                             </svg>
                         </span>
 
-                        <p class="ms-3 font-medium text-sm text-white truncate">
+                        <p class="ms-3 truncate text-sm font-medium text-white">
                             {{ message }}
                         </p>
                     </div>
@@ -74,7 +74,7 @@ watchEffect(async () => {
                     <div class="shrink-0 sm:ms-3">
                         <button
                             type="button"
-                            class="-me-1 flex p-2 rounded-md focus:outline-none sm:-me-2 transition"
+                            class="-me-1 flex rounded-md p-2 transition focus:outline-none sm:-me-2"
                             :class="{
                                 'hover:bg-indigo-600 focus:bg-indigo-600':
                                     style == 'success',

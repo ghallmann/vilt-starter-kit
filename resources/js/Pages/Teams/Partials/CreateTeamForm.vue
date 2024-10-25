@@ -30,9 +30,9 @@ const createTeam = () => {
             <div class="col-span-6">
                 <InputLabel value="Team Owner" />
 
-                <div class="flex items-center mt-2">
+                <div class="mt-2 flex items-center">
                     <img
-                        class="object-cover w-12 h-12 rounded-full"
+                        class="h-12 w-12 rounded-full object-cover"
                         :src="$page.props.auth.user.profile_photo_url"
                         :alt="$page.props.auth.user.name"
                     />
@@ -54,7 +54,7 @@ const createTeam = () => {
                     id="name"
                     v-model="form.name"
                     type="text"
-                    class="block w-full mt-1"
+                    class="mt-1 block w-full"
                     autofocus
                 />
                 <InputError :message="form.errors.name" class="mt-2" />

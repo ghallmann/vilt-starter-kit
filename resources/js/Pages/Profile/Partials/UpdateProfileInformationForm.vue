@@ -105,14 +105,14 @@ const clearPhotoFileInput = () => {
                     <img
                         :src="user.profile_photo_url"
                         :alt="user.name"
-                        class="rounded-full h-20 w-20 object-cover"
+                        class="h-20 w-20 rounded-full object-cover"
                     />
                 </div>
 
                 <!-- New Profile Photo Preview -->
                 <div v-show="photoPreview" class="mt-2">
                     <span
-                        class="block rounded-full w-20 h-20 bg-cover bg-no-repeat bg-center"
+                        class="block h-20 w-20 rounded-full bg-cover bg-center bg-no-repeat"
                         :style="
                             'background-image: url(\'' + photoPreview + '\');'
                         "
@@ -120,7 +120,7 @@ const clearPhotoFileInput = () => {
                 </div>
 
                 <SecondaryButton
-                    class="mt-2 me-2"
+                    class="me-2 mt-2"
                     type="button"
                     @click.prevent="selectNewPhoto"
                 >
@@ -172,14 +172,14 @@ const clearPhotoFileInput = () => {
                         user.email_verified_at === null
                     "
                 >
-                    <p class="text-sm mt-2">
+                    <p class="mt-2 text-sm">
                         Your email address is unverified.
 
                         <Link
                             :href="route('verification.send')"
                             method="post"
                             as="button"
-                            class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                            class="rounded-md text-sm text-gray-600 underline hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                             @click.prevent="sendEmailVerification"
                         >
                             Click here to re-send the verification email.
@@ -188,7 +188,7 @@ const clearPhotoFileInput = () => {
 
                     <div
                         v-show="verificationLinkSent"
-                        class="mt-2 font-medium text-sm text-green-600"
+                        class="mt-2 text-sm font-medium text-green-600"
                     >
                         A new verification link has been sent to your email
                         address.
