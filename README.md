@@ -5,9 +5,9 @@
 - [x] Install Laravel
 - [x] Install Jetstream
 - [x] Confif Makefile
-- [ ] Remove unnecessary boilerplate
+- [x] Remove unnecessary boilerplate
 - [x] Config eslint + prettier
 - [x] Config prettier-plugin-tailwindcss
-- [ ] Config logs
+- [x] Config logs
 - [x] Config testing enviroment
 - [ ] Create 'installation guide' 
