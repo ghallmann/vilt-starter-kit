@@ -9,8 +9,12 @@ else
 endif
 setup:
 	@make build
-	@make up 
+	@make up
 	@make composer-update
+	@if [ -z "$$(grep 'APP_KEY' .env | grep -v 'APP_KEY=$$')" ]; then \
+		echo "Generating app key..."; \
+		docker exec app bash -c "php artisan key:generate"; \
+	fi
 
 build:
 	docker-compose -f $(DOCKER_COMPOSE_FILE) build --no-cache --force-rm
