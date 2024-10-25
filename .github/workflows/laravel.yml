@@ -37,7 +37,15 @@ jobs:
       with:
         node-version: '18'
 
-    # Copy .env and update it for the testing environment
+    # Install PHP dependencies before modifying .env or running Laravel commands
+    - name: Install PHP dependencies
+      run: composer install --no-progress --no-interaction --prefer-dist
+
+    # Install Node dependencies
+    - name: Install Node dependencies
+      run: npm ci
+
+    # Configure .env for the testing environment after dependencies are installed
     - name: Copy .env
       run: php -r "file_exists('.env') || copy('.env.example', '.env');"
 
@@ -45,7 +53,7 @@ jobs:
       run: |
         echo "APP_ENV=testing" >> .env
         echo "DB_CONNECTION=mysql" >> .env
-        echo "DB_HOST=127.0.0.1" >> .env # Using localhost to match GitHub Actions MySQL service
+        echo "DB_HOST=127.0.0.1" >> .env
         echo "DB_PORT=3306" >> .env
         echo "DB_DATABASE=laravel_test" >> .env
         echo "DB_USERNAME=root" >> .env
@@ -56,13 +64,6 @@ jobs:
         echo "MAIL_MAILER=log" >> .env
         echo "VITE_DEV_SERVER=false" >> .env # Disable dev server for CI
         php artisan config:clear
-
-    # Install dependencies
-    - name: Install PHP dependencies
-      run: composer install --no-progress --no-interaction --prefer-dist
-
-    - name: Install Node dependencies
-      run: npm ci
 
     # Build Vite assets for Vue frontend
     - name: Build assets
