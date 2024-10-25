@@ -32,7 +32,7 @@ services:
         networks:
             - laravel
 
-    # db mysql
+    # db
     db:
         container_name: mysql8
         image: mysql:8.0
@@ -45,6 +45,20 @@ services:
             - db_data:/var/lib/mysql
         ports:
             - "3306:3306"
+        networks:
+            - laravel
+    
+    # db for testing
+    db_test:
+        container_name: mysql_test
+        image: mysql:8.0
+        restart: unless-stopped
+        environment:
+            MYSQL_DATABASE: ${DB_TEST_DATABASE}
+            MYSQL_ROOT_PASSWORD: ${DB_TEST_PASSWORD}
+            MYSQL_ROOT_HOST: "%"
+        volumes:
+            - db_test_data:/var/lib/mysql
         networks:
             - laravel
 
@@ -66,6 +80,7 @@ services:
 
 volumes:
   db_data:
+  db_test_data:
   
 networks:
     laravel:
