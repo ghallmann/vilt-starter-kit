@@ -4,13 +4,14 @@
 - [x] Config docker-compose
 - [x] Install Laravel
 - [x] Install Jetstream
-- [x] Confif Makefile
+- [x] Config Makefile
 - [x] Remove unnecessary boilerplate
 - [x] Config eslint + prettier
 - [x] Config prettier-plugin-tailwindcss
 - [x] Config logs
 - [x] Config testing enviroment
-- [x] Create 'installation guide' 
+- [x] Create 'installation guide'
+- [x] Config Github Actions CI 
 
 # How To Install
 ```command
