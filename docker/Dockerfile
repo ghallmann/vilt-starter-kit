@@ -40,6 +40,7 @@ WORKDIR /var/www
 
 COPY . .
 
+RUN composer install
 RUN npm install
 RUN npm run build
 
