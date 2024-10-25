@@ -2,10 +2,11 @@
     "private": true,
     "type": "module",
     "scripts": {
+        "dev": "vite --host",
         "build": "vite build",
         "lint": "eslint resources/**/*.{js,vue}",
-        "format": "prettier --write 'resources/**/*.{js,vue}'",
-        "dev": "vite"
+        "lint:fix": "eslint resources/**/*.{js,vue} --fix",
+        "format": "prettier --write 'resources/**/*.{js,vue}'"
     },
     "devDependencies": {
         "@eslint/js": "^9.13.0",
