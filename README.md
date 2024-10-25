@@ -7,7 +7,7 @@
 - [x] Confif Makefile
 - [ ] Remove unnecessary boilerplate
 - [x] Config eslint + prettier
-- [ ] Config prettier-plugin-tailwindcss
+- [x] Config prettier-plugin-tailwindcss
 - [ ] Config logs
 - [x] Config testing enviroment
 - [ ] Create 'installation guide' 
