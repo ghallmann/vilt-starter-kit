@@ -10,4 +10,19 @@
 - [x] Config prettier-plugin-tailwindcss
 - [x] Config logs
 - [x] Config testing enviroment
-- [ ] Create 'installation guide' 
+- [x] Create 'installation guide' 
+
+# How To Install
+```command
+git clone https://github.com/ghallmann/vilt-starter-kit.git
+```
+- Create the `.env` with the `.env.example` content
+
+### In Your Terminal
+- Run `make setup`
+- Run `make data`
+- Run `make cli`
+
+### In The Container Terminal
+- Run `npm install`
+- Run `npm run dev`
