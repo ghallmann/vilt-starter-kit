@@ -11,6 +11,7 @@
         "laravel/jetstream": "^5.3",
         "laravel/sanctum": "^4.0",
         "laravel/tinker": "^2.9",
+        "opcodesio/log-viewer": "^3.11",
         "tightenco/ziggy": "^2.0"
     },
     "require-dev": {
